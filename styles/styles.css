@@ -3,4 +3,75 @@ Put your styles in this file. Import your fonts at the top of the file! See exam
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 ===== */
 
-/*test */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wdth,wght@100..100,200..900&display=swap');
+
+*,
+*::before,
+*::after {box-sizing: border-box;}
+
+html {scroll-behavior:smooth;}
+
+body{
+    margin: 0;
+    background: #ffffff;
+    color: #15171a;
+    font-family: "Outfit", ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-optical-sizing: auto;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+}
+
+/* site brand */
+
+body > header{
+    border-bottom: 1px solid #e7e9ee;
+    background: linear-gradient(180deg, rgba(240,244,255,0.6), transparent);
+}
+
+body > header h2 {
+    max-width: 72ch;
+    margin: 0 auto;
+    padding: 2rem 5vw;
+    font-weight: 800;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+}
+
+/* article */
+
+article{
+    max-width: 72ch;
+    margin: 0 auto;
+    padding: 6vh 5vw 12vh;
+}
+
+/* header with author date and title */
+
+article > header {
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid #e7e9ee;
+    margin-bottom: 1.6rem;
+}
+
+article > header h5{
+    margin: 0 0 0.25rem;
+    color: #60656f;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+article > header h5 time{
+    margin-left; 0.5ch;
+    font-weight: 450;
+}
+
+article > header h1{
+    margin: 0;
+    font-size: clamp(2rem, 1.2rem + 3vw, 3rem);
+    font-weight: 850;
+    line-height: 1.12;
+    letter-spacing: 0.01em;
+    text-wrap: balance;
+}
