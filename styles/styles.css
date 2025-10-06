@@ -2,3 +2,283 @@
 Put your styles in this file. Import your fonts at the top of the file! See example below, which uses @import to retrieve the Roboto typeface from Google Fonts.
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300..1000;1,300..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+/* -- */ 
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {scroll-behavior:smooth;} 
+
+
+body{
+    margin: 0;
+    background: #f9fafc;
+    color: #1c1e21;
+    font-family: "DM Serif Text", Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-optical-sizing: auto;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+}
+
+/*headlines*/
+h1, h2, h3, h4, h5, h6,
+button, a, nav, .tags, .share {
+    font-family: "DM Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* site brand */
+
+body > header{
+    border-bottom: 1px solid #c7cbd6;
+    background: linear-gradient(135deg, #0b6ca1, #5ac8fa);
+    color: white;
+    padding: 3rem 0 2.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+body > header h2{
+    max-width: 110ch;
+    margin: 0 auto;
+    padding: 2rem 5vw;
+    font-weight: 900;
+    font-size: 2.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+/* article */
+
+article{
+    max-width: 110ch;
+    margin: 0 auto;
+    padding: 6vh 5vw 12vh;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.05);
+}
+
+/* header with author date and title */
+
+article > header {
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid #c7cbd6;
+    margin-bottom: 1.6rem;
+}
+
+article > header h1{
+    font-weight: 800;
+    letter-spacing: 0.005em;
+}
+
+h2{ font-weight: 700;}
+h4, h5{font-weight: 600;}
+
+article > header h5{
+    margin: 0 0 0.25rem;
+    color: #60656f;
+    font-weight: 800;
+    font-size: 0.95rem;
+}
+
+article > header h5 time{
+    margin-left: 0.5ch;
+    font-weight: 450;
+}
+
+article > header h1{
+    margin: 0;
+    font-size: clamp(2rem, 1.2rem + 3vw, 3rem);
+    font-weight: 850;
+    line-height: 1.12;
+    letter-spacing: 0.01em;
+    text-wrap: balance;
+}
+
+article > header p,
+section > p:first-of-type,
+blockquote p,
+figcaption p,
+li p,
+.note p{ text-indent: 0;}
+
+/* read time, share, tags */
+
+article > ul{
+    list-style: none;
+    padding: 0;
+    margin: 0.8rem 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.1rem;
+    color: #60656f;
+}
+
+article > ul li{position: relative; padding-left: 0.9rem; }
+article > ul li::before { content:"•"; position: relative; left: 0; color: #60656f;}
+
+article ul.tags,
+article ul.side{
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin: 0 0 1rem;
+  display: block;
+}
+article ul.tags li,
+article ul.side li{
+  display: list-item;
+  margin: 0.35rem 0;
+}
+article ul.tags li::before,
+article ul.side li::before{ content: none; }
+/* buttons */
+
+a {
+    color: #0b6ca1;
+    font-weight: 600;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.18em;
+    transition: color 0.2s ease
+}
+
+a:visited {color: #6b4fd3;}
+a:hover{text-decoration-thickness:0.14em;}
+
+button {
+    border: 1px solid #c7cbd6;
+    background: linear-gradient(180deg, #ffffff, #f6f8fb );
+    font: inherit;
+    padding: 0.45rem 0.75rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: transform 0.06s ease-in-out, box-shadow 0.2s ease;
+}
+
+button:hover {box-shadow: 0 8px 24px rgba(0,0,0,0.08);}
+button:active {transform: translateY(1px) ;}
+
+/* author */
+article > aside {
+    background: #fafbfc;
+    margin-bottom: 2.75rem;
+    border: 1px solid #c7cbd6;
+    border-radius: 14px;
+    padding: 1rem 1.1rem;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+}
+
+article > aside h4 {margin: 0 0 0.25rem; font-weight: 800;}
+
+article > aside h5 {
+    margin: 0 0 0.4rem;
+    color: #60656f;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+article > aside p{margin: 0;}
+
+/*introduction*/
+
+article > section:first-of-type{
+    margin-top: 0.5rem;
+}
+
+section > p{margin: 0 0 1.2rem; font-size: 1.06rem;}
+section > p span{font-weight: 800; color: #0b6ca1;}
+
+/* body */
+
+p{
+    margin: 0 0 1rem;
+    text-indent: 1.25em;
+}
+
+h2{
+    font-size: clamp(1.35rem, 1.1rem + 1.6vw, 2.1rem);
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+    margin: 2.2rem 0 0.8rem;
+    font-weight: 770;
+    color:#0b6ca1;
+    border-left: 4px solid #5ac8fa;
+    padding-left: 0.6rem;
+}
+
+h4, h5{ margin: 1.2rem 0 0.4rem; }
+
+ul{ padding-left: 1.25rem; margin: 0 0 1rem;}
+li{ margin: 0.35rem 0;}
+li::marker {color: #60656f}
+
+/* test code */
+ul.tag,
+ul.tags{
+  display: block;         
+  list-style: disc;      
+  padding-left: 1.25rem;  
+  margin: 0 0 1rem;
+  gap: 0;              
+}
+
+ul.tag li,
+ul.tags li{
+  display: list-item;     
+  margin: 0.35rem 0;
+  padding-left: 0;
+}
+/* */
+/*quotes*/
+blockquote{ 
+    margin: 1.4rem 0;
+    padding: 1rem 1.1rem;
+    border-left: 4px solid #084a6e; font-size: 0.95rem;
+    color: #2b2b2b;
+    background: #e9f4fc;
+    border-radius: 0 14px 14px 0;
+}
+
+blockquote p{ margin: 0;}
+blockquote p + p{margin-top: 0.6rem; color: #60656f; font-size: 0.95rem;}
+cite{font-style: italic;}
+
+/*figures*/
+
+figure{
+    margin: 2rem 0;
+    border: 1px solid #c7cbd6;
+    border-radius: 14px;
+    background: #fafbfc; 
+    overflow: clip;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1)
+}
+
+figure img{ display: block; width: 100%; height: auto;}
+figcaption{
+    border-top: 1px solid #c7cbd6;
+    background: #f2f6fb;
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
+    color: #60656f;
+}
+
+:focus-visible{ outline: 2px solid #084a6e; outline-offset: 3px;}
+
+@media (min-width: 1200px){
+    article{ padding-top: 8vh; padding-bottom: 14vh;}
+    article > aside{display: grid; grid-template-columns: 1fr; gap: 0.5rem 1rem;}
+} 
